@@ -35,11 +35,13 @@ public class PaymentController {
         }
     }
 
-    @GetMapping(value = "/payment/get")
-    public CommonResult getPaymentById(@Param("id") Long id) {
-        System.out.println(11111);
+    @GetMapping(value = "/payment/get/{id}")
+//    public CommonResult getPaymentById(@Param("id") Long id) {
+    public CommonResult getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
-        System.out.println("****查询结果：" + payment);
+//        int i = 1;
+//        System.out.println(i);
+        System.out.println("****查询结果1：" + payment);
         if (payment != null) {
             return new CommonResult(200, "查询成功", payment);
         } else {
