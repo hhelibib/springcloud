@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
  * @auther JYH
  */
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 public class CommonResult<T>{
     private Integer code;
@@ -22,5 +22,12 @@ public class CommonResult<T>{
         this.message = message;
         this.data = null;
     }
+
+    public CommonResult(Integer code, String message, T data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
+    }
+
 
 }

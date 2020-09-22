@@ -6,6 +6,7 @@ import com.atguigu.springcloud.servive.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,10 +35,11 @@ public class PaymentController {
         }
     }
 
-    @GetMapping("/payment/get/{id}")
-    public CommonResult getPaymentById(Long id) {
+    @GetMapping(value = "/payment/get")
+    public CommonResult getPaymentById(@Param("id") Long id) {
+        System.out.println(11111);
         Payment payment = paymentService.getPaymentById(id);
-        System.out.println("****插入结果：" + payment);
+        System.out.println("****查询结果：" + payment);
         if (payment != null) {
             return new CommonResult(200, "查询成功", payment);
         } else {
