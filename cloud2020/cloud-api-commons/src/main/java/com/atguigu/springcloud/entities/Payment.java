@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * ClassName: Payment
- * Created 2020/9/21 21:36
+ * Created 2020/9/24 22:53
  * @auther JYH
  */
 @Data
@@ -22,3 +22,4 @@ public class Payment implements Serializable {
         this.serial = serial;
     }
 }
+

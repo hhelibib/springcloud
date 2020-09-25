@@ -1,12 +1,11 @@
 package com.atguigu.springcloud.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
  * ClassName: CommonResult
- * Created 2020/9/21 21:39
+ * Created 2020/9/24 22:53
  * @auther JYH
  */
 @Data
